@@ -17,6 +17,7 @@
 
 .clock-container {
     height: min-content;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(var(--cols), 25%);
     grid-template-rows: repeat(var(--rows), 25%);
