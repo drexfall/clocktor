@@ -19,7 +19,7 @@ label {
     appearance: none;
     width: 100%;
     height: var(--thumb-width);
-    background: var(--primary-color);
+    background: var(--primary-500);
     outline: none;
     border-radius: var(--border-radius) 0;
     overflow: hidden;
@@ -36,14 +36,14 @@ label {
     width: var(--thumb-width);
     height: 100%;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-500);
     outline: none;
     border: none;
 }
 
 .drex-slider::-moz-range-progress {
     height: 100%;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-500);
     border: none;
 }
 
@@ -52,8 +52,8 @@ label {
     -webkit-appearance: none;
     height: 100%;
     cursor: ew-resize;
-    background: var(--accent-color);
-    box-shadow: -100px 0 0 80px var(--accent-color);
+    background: var(--secondary-500);
+    box-shadow: -100px 0 0 80px var(--secondary-500);
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     border: none;
 }
@@ -61,7 +61,7 @@ label {
 .drex-slider::-webkit-slider-runnable-track {
     height: 100%;
     -webkit-appearance: none;
-    color: var(--accent-color);
+    color: var(--secondary-500);
     border: none;
 }
 
@@ -69,7 +69,7 @@ label {
     width: var(--thumb-width);
     height: 100%;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-500);
     outline: none;
     border: none;
 }
@@ -95,8 +95,8 @@ label {
             pointer-events: none;
         }
         input:checked~span {
-            background-color: var(--accent-color);
-            border-color: var(--accent-color);
+            background-color: var(--secondary-500);
+            border-color: var(--secondary-500);
         }
         input:checked~span:after {
             display: block;
@@ -109,7 +109,7 @@ label {
             width: var(--size);
             background-color: var(--background);
             transition-duration: 0.3s;
-            border: calc(var(--size)*0.1) solid var(--primary-color);
+            border: calc(var(--size)*0.1) solid var(--primary-500);
             border-radius: calc(var(--size)*0.1);
             pointer-events: none;
         }
@@ -130,13 +130,13 @@ label {
     }
     label:hover {
         input~span {
-            border-color: var(--accent-color);
+            border-color: var(--secondary-500);
         }
         input:checked~span {
             background-color: var(--background);
         }
         input:checked~span::after {
-            border-color: var(--accent-color);
+            border-color: var(--secondary-500);
         }
     }
 }
@@ -145,7 +145,7 @@ label {
     label {
         input:checked~span {
             background-color: var(--background);
-            border-color: var(--accent-color);
+            border-color: var(--secondary-500);
         }
         span {
             border-radius: 100%;
@@ -155,14 +155,14 @@ label {
             transform: translate(-50%, -50%);
             width: 60%;
             height: 60%;
-            background-color: var(--accent-color);
+            background-color: var(--secondary-500);
             border-radius: 100%;
             border: none;
         }
     }
     label:hover {
         input~span {
-            border-color: var(--accent-color);
+            border-color: var(--secondary-500);
         }
         input:checked~span::after {
             opacity: 1;

@@ -78,7 +78,7 @@ footer {
             text-transform: lowercase;
         }
         input:focus {
-            border-color: var(--primary-color);
+            border-color: var(--primary-500);
         }
         input:invalid {
             border-color: #ee0000;
@@ -122,21 +122,21 @@ footer {
         transform: translateY(0%);
     }
     .primary {
-        background: var(--primary-color);
+        background: var(--primary-500);
         label {
             color: var(--background);
         }
     }
     .accent {
-        background: var(--accent-color);
+        background: var(--secondary-500);
         label {
-            color: var(--primary-color);
+            color: var(--primary-500);
         }
     }
     .background {
         background: var(--background);
         label {
-            color: var(--primary-color);
+            color: var(--primary-500);
         }
     }
 }
@@ -182,13 +182,13 @@ footer {
                 font-size: calc(var(--font-size)*6);
                 z-index: 7;
                 pointer-events: none;
-                color: var(--accent-color);
+                color: var(--secondary-500);
                 background-blend-mode: difference;
             }
         }
         .drex-toggle-box::after {
             content: "";
-            background-color: var(--primary-color);
+            background-color: var(--primary-500);
             opacity: 0.4;
             height: 100%;
             width: 100%;
@@ -199,7 +199,7 @@ footer {
         }
         .drex-toggle-box:hover {
             p {
-                color: var(--accent-color);
+                color: var(--secondary-500);
             }
         }
         .drex-toggle-box:active,
@@ -208,7 +208,7 @@ footer {
         }
         .drex-toggle-box.selected::after {
             content: "";
-            background-color: var(--accent-color);
+            background-color: var(--secondary-500);
             opacity: 0.9;
             height: 100%;
             width: 100%;
@@ -226,13 +226,13 @@ footer {
             opacity: 0.6;
         }
         .drex-toggle-box.selected {
-            background-color: var(--accent-color);
+            background-color: var(--secondary-500);
             p {
                 color: var(--background);
             }
         }
         .drex-toggle-box.selected:hover::after {
-            background-color: var(--primary-color);
+            background-color: var(--primary-500);
         }
     }
 }

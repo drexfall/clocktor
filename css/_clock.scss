@@ -70,7 +70,7 @@
 }
 
 .hand {
-    fill: var(--primary-color);
+    fill: var(--primary-500);
     transform: translateX(calc(0pt - var(--stroke-width)));
     height: calc(50% + var(--stroke-width));
     x: 50%;

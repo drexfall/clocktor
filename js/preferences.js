@@ -44,8 +44,8 @@ function tint_shade(color, delta) {
 for (let c = 0; c < palettes.length; c++) {
     let elem = palettes[c];
     let colors = [
-        body_style.getPropertyValue("--primary-color"),
-        body_style.getPropertyValue("--accent-color"),
+        body_style.getPropertyValue("--primary-500"),
+        body_style.getPropertyValue("--secondary-500"),
         body_style.getPropertyValue("--background"),
     ];
     elem.value = colors[c].slice(1);
@@ -63,7 +63,7 @@ for (let c = 0; c < palettes.length; c++) {
             if (!e.target.value.match("^([a-fA-F0-9]){1,6}$")) {
                 e.target.value = color_value.slice(0, color_value.length - 1);
             }
-            if (css_var === "--primary-color") {
+            if (css_var === "--primary-500") {
                 body.style.setProperty(
                     "--shadow",
                     "#" + tint_shade(color_value, -160)

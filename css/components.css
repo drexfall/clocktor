@@ -1,44 +1,29 @@
 .display-wrapper {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
+  box-sizing: border-box;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
-  -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   width: 100%;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
   max-width: 720pt;
 }
 
 .display-container {
   width: auto;
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .clock-container {
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
-  display: -ms-grid;
+  width: 100%;
   display: grid;
-  -ms-grid-columns: (25%)[var];
-      grid-template-columns: repeat(var(--cols), 25%);
-  -ms-grid-rows: (25%)[var];
-      grid-template-rows: repeat(var(--rows), 25%);
+  grid-template-columns: repeat(var(--cols), 25%);
+  grid-template-rows: repeat(var(--rows), 25%);
 }
 
 .special-display {
-  -ms-grid-columns: (calc(100%/var(--cols)/2))[calc];
-      grid-template-columns: repeat(calc(var(--cols)*2), calc(100%/var(--cols)/2));
+  grid-template-columns: repeat(calc(var(--cols) * 2), calc(100% / var(--cols) / 2));
 }
 
 #feFlood1752 {
@@ -63,19 +48,16 @@
 
 .clock-body {
   fill: url(#linearGradient8366);
-  -webkit-filter: url(#filter1762);
-          filter: url(#filter1762);
-  cx: calc(50%);
-  cy: calc(50%);
-  r: calc(50% - var(--stroke-width)*2);
+  filter: url(#filter1762);
+  cx: 50%;
+  cy: 50%;
+  r: calc(50% - var(--stroke-width) * 2);
 }
 
 .hand-wrapper {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
   transform-box: fill-box;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
 }
 
 .hand-container {
@@ -87,37 +69,32 @@
 }
 
 .hand {
-  fill: var(--primary-color);
-  -webkit-transform: translateX(calc(0pt - var(--stroke-width)));
-          transform: translateX(calc(0pt - var(--stroke-width)));
+  fill: var(--primary-500);
+  transform: translateX(calc(0pt - var(--stroke-width)));
   height: calc(50% + var(--stroke-width));
   x: 50%;
   y: calc(50% - var(--stroke-width));
   ry: calc(var(--stroke-width));
-  width: calc(var(--stroke-width)*2);
+  width: calc(var(--stroke-width) * 2);
 }
 
 #hour_hand {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 #minute_hand {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 label {
   font-family: "Raleway", sans-serif;
-  letter-spacing: calc(var(--font-size)*0.1);
+  letter-spacing: calc(var(--font-size) * 0.1);
 }
 
 .drex-ftr {
   height: unset;
-  -ms-grid-columns: 10fr;
-      grid-template-columns: 10fr;
+  grid-template-columns: 10fr;
 }
-
 .drex-ftr .ftr-loc {
   list-style: none;
   padding: 0;
@@ -126,18 +103,15 @@ label {
 
 .drex-slider {
   --thumb-width: 25pt;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   width: 100%;
   height: var(--thumb-width);
-  background: var(--primary-color);
+  background: var(--primary-500);
   outline: none;
   border-radius: var(--border-radius) 0;
   overflow: hidden;
   cursor: ew-resize;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .drex-slider.disabled {
@@ -149,14 +123,14 @@ label {
   width: var(--thumb-width);
   height: 100%;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-500);
   outline: none;
   border: none;
 }
 
 .drex-slider::-moz-range-progress {
   height: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-500);
   border: none;
 }
 
@@ -165,9 +139,8 @@ label {
   -webkit-appearance: none;
   height: 100%;
   cursor: ew-resize;
-  background: var(--accent-color);
-  -webkit-box-shadow: -100px 0 0 80px var(--accent-color);
-          box-shadow: -100px 0 0 80px var(--accent-color);
+  background: var(--secondary-500);
+  box-shadow: -100px 0 0 80px var(--secondary-500);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   border: none;
 }
@@ -175,7 +148,7 @@ label {
 .drex-slider::-webkit-slider-runnable-track {
   height: 100%;
   -webkit-appearance: none;
-  color: var(--accent-color);
+  color: var(--secondary-500);
   border: none;
 }
 
@@ -183,7 +156,7 @@ label {
   width: var(--thumb-width);
   height: 100%;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-500);
   outline: none;
   border: none;
 }
@@ -192,7 +165,6 @@ label {
 .drex-radio {
   --size: 25pt;
 }
-
 .drex-checkbox label,
 .drex-radio label {
   display: block;
@@ -201,13 +173,9 @@ label {
   margin-bottom: 1em;
   cursor: pointer;
   font-size: var(--size);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   opacity: 0.9;
 }
-
 .drex-checkbox label input,
 .drex-radio label input {
   position: absolute;
@@ -217,18 +185,15 @@ label {
   width: 0;
   pointer-events: none;
 }
-
 .drex-checkbox label input:checked ~ span,
 .drex-radio label input:checked ~ span {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: var(--secondary-500);
+  border-color: var(--secondary-500);
 }
-
 .drex-checkbox label input:checked ~ span:after,
 .drex-radio label input:checked ~ span:after {
   display: block;
 }
-
 .drex-checkbox label span,
 .drex-radio label span {
   position: absolute;
@@ -237,13 +202,11 @@ label {
   height: var(--size);
   width: var(--size);
   background-color: var(--background);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  border: calc(var(--size)*0.1) solid var(--primary-color);
-  border-radius: calc(var(--size)*0.1);
+  transition-duration: 0.3s;
+  border: calc(var(--size) * 0.1) solid var(--primary-500);
+  border-radius: calc(var(--size) * 0.1);
   pointer-events: none;
 }
-
 .drex-checkbox label span:after,
 .drex-radio label span:after {
   content: "";
@@ -251,56 +214,48 @@ label {
   display: none;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
   width: 20%;
   height: 50%;
   border: solid var(--background);
-  border-width: 0 calc(var(--size)*0.15) calc(var(--size)*0.15) 0;
-  border-radius: calc(var(--size)*0.1);
+  border-width: 0 calc(var(--size) * 0.15) calc(var(--size) * 0.15) 0;
+  border-radius: calc(var(--size) * 0.1);
   z-index: 10;
 }
-
 .drex-checkbox label:hover input ~ span,
 .drex-radio label:hover input ~ span {
-  border-color: var(--accent-color);
+  border-color: var(--secondary-500);
 }
-
 .drex-checkbox label:hover input:checked ~ span,
 .drex-radio label:hover input:checked ~ span {
   background-color: var(--background);
 }
-
 .drex-checkbox label:hover input:checked ~ span::after,
 .drex-radio label:hover input:checked ~ span::after {
-  border-color: var(--accent-color);
+  border-color: var(--secondary-500);
 }
 
 .drex-radio label input:checked ~ span {
   background-color: var(--background);
-  border-color: var(--accent-color);
+  border-color: var(--secondary-500);
 }
-
 .drex-radio label span {
   border-radius: 100%;
 }
-
 .drex-radio label span:after {
   opacity: 0.8;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 60%;
   height: 60%;
-  background-color: var(--accent-color);
+  background-color: var(--secondary-500);
   border-radius: 100%;
   border: none;
 }
-
 .drex-radio label:hover input ~ span {
-  border-color: var(--accent-color);
+  border-color: var(--secondary-500);
 }
-
 .drex-radio label:hover input:checked ~ span::after {
   opacity: 1;
 }
+
 /*# sourceMappingURL=components.css.map */

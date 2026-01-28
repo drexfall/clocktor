@@ -4,16 +4,18 @@
     --rows: 6;
     --cols: 4;
     --stroke-width: 30pt;
-    --primary-color: #13246b;
+    --primary-500: #13246b;
+    --secondary-500: #dfaf12;
     --background: #dedede;
     --top-gradient: #c4c4c4;
     --bottom-gradient: #f1f1f1;
     --shadow: #0a0a37;
     --glow: #f8f7f7;
+    --font-size: 12pt;
 }
 
 [data-theme="dark"] {
-    --primary-color: #006e8b;
+    --primary-500: #006e8b;
     --background: #0f0f26;
     --top-gradient: #191930;
     --bottom-gradient: #05051c;
@@ -40,6 +42,7 @@ body {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    height: 100dvh;
 }
 
 .display-page {
