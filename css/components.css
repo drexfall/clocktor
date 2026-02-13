@@ -9,6 +9,7 @@
 }
 
 .display-container {
+  padding: 0.8em;
   width: auto;
   height: min-content;
   display: flex;
@@ -69,7 +70,7 @@
 }
 
 .hand {
-  fill: var(--primary-500);
+  fill: var(--primary-color);
   transform: translateX(calc(0pt - var(--stroke-width)));
   height: calc(50% + var(--stroke-width));
   x: 50%;
@@ -106,7 +107,7 @@ label {
   appearance: none;
   width: 100%;
   height: var(--thumb-width);
-  background: var(--primary-500);
+  background: var(--background);
   outline: none;
   border-radius: var(--border-radius) 0;
   overflow: hidden;
@@ -123,14 +124,14 @@ label {
   width: var(--thumb-width);
   height: 100%;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  background-color: var(--secondary-500);
+  background-color: var(--accent-color);
   outline: none;
   border: none;
 }
 
 .drex-slider::-moz-range-progress {
   height: 100%;
-  background-color: var(--secondary-500);
+  background-color: var(--accent-color);
   border: none;
 }
 
@@ -139,8 +140,8 @@ label {
   -webkit-appearance: none;
   height: 100%;
   cursor: ew-resize;
-  background: var(--secondary-500);
-  box-shadow: -100px 0 0 80px var(--secondary-500);
+  background: var(--accent-color);
+  box-shadow: -100px 0 0 80px var(--accent-color);
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
   border: none;
 }
@@ -148,7 +149,7 @@ label {
 .drex-slider::-webkit-slider-runnable-track {
   height: 100%;
   -webkit-appearance: none;
-  color: var(--secondary-500);
+  color: var(--accent-color);
   border: none;
 }
 
@@ -156,7 +157,7 @@ label {
   width: var(--thumb-width);
   height: 100%;
   border-radius: 0 var(--border-radius) var(--border-radius) 0;
-  background-color: var(--secondary-500);
+  background-color: var(--accent-color);
   outline: none;
   border: none;
 }
@@ -187,8 +188,8 @@ label {
 }
 .drex-checkbox label input:checked ~ span,
 .drex-radio label input:checked ~ span {
-  background-color: var(--secondary-500);
-  border-color: var(--secondary-500);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 .drex-checkbox label input:checked ~ span:after,
 .drex-radio label input:checked ~ span:after {
@@ -203,7 +204,7 @@ label {
   width: var(--size);
   background-color: var(--background);
   transition-duration: 0.3s;
-  border: calc(var(--size) * 0.1) solid var(--primary-500);
+  border: calc(var(--size) * 0.1) solid var(--primary-color);
   border-radius: calc(var(--size) * 0.1);
   pointer-events: none;
 }
@@ -224,7 +225,7 @@ label {
 }
 .drex-checkbox label:hover input ~ span,
 .drex-radio label:hover input ~ span {
-  border-color: var(--secondary-500);
+  border-color: var(--accent-color);
 }
 .drex-checkbox label:hover input:checked ~ span,
 .drex-radio label:hover input:checked ~ span {
@@ -232,12 +233,12 @@ label {
 }
 .drex-checkbox label:hover input:checked ~ span::after,
 .drex-radio label:hover input:checked ~ span::after {
-  border-color: var(--secondary-500);
+  border-color: var(--accent-color);
 }
 
 .drex-radio label input:checked ~ span {
   background-color: var(--background);
-  border-color: var(--secondary-500);
+  border-color: var(--accent-color);
 }
 .drex-radio label span {
   border-radius: 100%;
@@ -247,12 +248,12 @@ label {
   transform: translate(-50%, -50%);
   width: 60%;
   height: 60%;
-  background-color: var(--secondary-500);
+  background-color: var(--accent-color);
   border-radius: 100%;
   border: none;
 }
 .drex-radio label:hover input ~ span {
-  border-color: var(--secondary-500);
+  border-color: var(--accent-color);
 }
 .drex-radio label:hover input:checked ~ span::after {
   opacity: 1;

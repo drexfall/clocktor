@@ -1,88 +1,88 @@
 .display-wrapper {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
-    width: 100%;
-    height: min-content;
-    max-width: 720pt;
-    // display: none;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  width: 100%;
+  height: min-content;
+  max-width: 720pt;
 }
 
 .display-container {
-    width: auto;
-    height: min-content;
-    display: flex;
+  padding: 0.8em;
+  width: auto;
+  height: min-content;
+  display: flex;
 }
 
 .clock-container {
-    height: min-content;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(var(--cols), 25%);
-    grid-template-rows: repeat(var(--rows), 25%);
+  height: min-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 25%);
+  grid-template-rows: repeat(var(--rows), 25%);
 }
 
 .special-display {
-    grid-template-columns: repeat(calc(var(--cols)*2), calc(100%/var(--cols)/2));
+  grid-template-columns: repeat(calc(var(--cols) * 2), calc(100% / var(--cols) / 2));
 }
 
 #feFlood1752 {
-    flood-color: var(--shadow)
+  flood-color: var(--shadow)
 }
 
 #feFlood8992 {
-    flood-color: var(--glow)
+  flood-color: var(--glow)
 }
 
 #stop8360 {
-    stop-opacity: 1;
-    offset: 0;
-    stop-color: var(--top-gradient);
+  stop-opacity: 1;
+  offset: 0;
+  stop-color: var(--top-gradient);
 }
 
 #stop8362 {
-    offset: 1;
-    stop-opacity: 1;
-    stop-color: var(--bottom-gradient);
+  offset: 1;
+  stop-opacity: 1;
+  stop-color: var(--bottom-gradient);
 }
 
 .clock-body {
-    fill: url(#linearGradient8366);
-    filter: url(#filter1762);
-    cx: calc(50%);
-    cy: calc(50%);
-    r: calc(50% - var(--stroke-width)*2);
+  fill: url(#linearGradient8366);
+  filter: url(#filter1762);
+  cx: calc(50%);
+  cy: calc(50%);
+  r: calc(50% - var(--stroke-width) * 2);
 }
 
 .hand-wrapper {
-    transform: rotate(0deg);
-    transform-box: fill-box;
-    transform-origin: center;
+  transform: rotate(0deg);
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
 .hand-container {
-    cx: 50%;
-    cy: 50%;
-    r: 50%;
-    fill: none;
-    stroke-dasharray: none;
+  cx: 50%;
+  cy: 50%;
+  r: 50%;
+  fill: none;
+  stroke-dasharray: none;
 }
 
 .hand {
-    fill: var(--primary-500);
-    transform: translateX(calc(0pt - var(--stroke-width)));
-    height: calc(50% + var(--stroke-width));
-    x: 50%;
-    y: calc(50% - var(--stroke-width));
-    ry: calc(var(--stroke-width));
-    width: calc(var(--stroke-width)*2);
+  fill: var(--primary-color);
+  transform: translateX(calc(0pt - var(--stroke-width)));
+  height: calc(50% + var(--stroke-width));
+  x: 50%;
+  y: calc(50% - var(--stroke-width));
+  ry: calc(var(--stroke-width));
+  width: calc(var(--stroke-width) * 2);
 }
 
 #hour_hand {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 #minute_hand {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }

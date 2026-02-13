@@ -4,8 +4,8 @@
     --rows: 6;
     --cols: 4;
     --stroke-width: 30pt;
-    --primary-500: #13246b;
-    --secondary-500: #dfaf12;
+    --primary-color: #13246b;
+    --accent-color: #dfaf12;
     --background: #dedede;
     --top-gradient: #c4c4c4;
     --bottom-gradient: #f1f1f1;
@@ -15,7 +15,7 @@
 }
 
 [data-theme="dark"] {
-    --primary-500: #006e8b;
+    --primary-color: #006e8b;
     --background: #0f0f26;
     --top-gradient: #191930;
     --bottom-gradient: #05051c;

@@ -80,7 +80,7 @@ footer {
   text-transform: lowercase;
 }
 .palette-wrapper .color-box input:focus {
-  border-color: var(--primary-500);
+  border-color: var(--primary-color);
 }
 .palette-wrapper .color-box input:invalid {
   border-color: #ee0000;
@@ -123,22 +123,22 @@ footer {
   transform: translateY(0%);
 }
 .palette-wrapper .primary {
-  background: var(--primary-500);
+  background: var(--primary-color);
 }
 .palette-wrapper .primary label {
   color: var(--background);
 }
 .palette-wrapper .accent {
-  background: var(--secondary-500);
+  background: var(--accent-color);
 }
 .palette-wrapper .accent label {
-  color: var(--primary-500);
+  color: var(--primary-color);
 }
 .palette-wrapper .background {
   background: var(--background);
 }
 .palette-wrapper .background label {
-  color: var(--primary-500);
+  color: var(--primary-color);
 }
 
 .display-toggle-wrapper {
@@ -153,7 +153,7 @@ footer {
 }
 .display-toggle-wrapper .display-settings {
   height: 100%;
-  background-color: transparent;
+  background-color: var(--background);
   border-radius: var(--border-radius);
   align-items: center;
   position: relative;
@@ -180,17 +180,18 @@ footer {
   justify-content: center;
   align-items: center;
   border-bottom: none;
+  opacity: 50%;
 }
 .display-toggle-wrapper .display-settings .drex-toggle-box p {
   font-size: calc(var(--font-size) * 6);
   z-index: 7;
   pointer-events: none;
-  color: var(--secondary-500);
+  color: var(--accent-color);
   background-blend-mode: difference;
 }
 .display-toggle-wrapper .display-settings .drex-toggle-box::after {
   content: "";
-  background-color: var(--primary-500);
+  background-color: var(--primary-color);
   opacity: 0.4;
   height: 100%;
   width: 100%;
@@ -199,17 +200,21 @@ footer {
   top: 0;
   transition: 0.5s;
 }
+.display-toggle-wrapper .display-settings .drex-toggle-box:hover {
+  opacity: 90%;
+}
 .display-toggle-wrapper .display-settings .drex-toggle-box:hover p {
-  color: var(--secondary-500);
+  color: var(--accent-color);
 }
 .display-toggle-wrapper .display-settings .drex-toggle-box:active,
 .display-toggle-wrapper .display-settings .drex-toggle-box.selected:active {
+  opacity: 100%;
   background-color: var(--background);
 }
 .display-toggle-wrapper .display-settings .drex-toggle-box.selected::after {
   content: "";
-  background-color: var(--secondary-500);
-  opacity: 0.9;
+  background-color: var(--primary-color);
+  opacity: 0.5;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -226,13 +231,15 @@ footer {
   opacity: 0.6;
 }
 .display-toggle-wrapper .display-settings .drex-toggle-box.selected {
-  background-color: var(--secondary-500);
+  opacity: 100%;
+  border: 2pt solid var(--accent-color);
+  background-color: var(--background);
 }
 .display-toggle-wrapper .display-settings .drex-toggle-box.selected p {
-  color: var(--background);
+  color: var(--accent-color);
 }
 .display-toggle-wrapper .display-settings .drex-toggle-box.selected:hover::after {
-  background-color: var(--primary-500);
+  background-color: var(--primary-color);
 }
 
 .misc-settings {
@@ -271,8 +278,8 @@ footer {
   --rows: 6;
   --cols: 4;
   --stroke-width: 30pt;
-  --primary-500: #13246b;
-  --secondary-500: #dfaf12;
+  --primary-color: #13246b;
+  --accent-color: #dfaf12;
   --background: #dedede;
   --top-gradient: #c4c4c4;
   --bottom-gradient: #f1f1f1;
@@ -282,7 +289,7 @@ footer {
 }
 
 [data-theme=dark] {
-  --primary-500: #006e8b;
+  --primary-color: #006e8b;
   --background: #0f0f26;
   --top-gradient: #191930;
   --bottom-gradient: #05051c;

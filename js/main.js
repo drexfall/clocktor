@@ -22,6 +22,7 @@ for (let d1 = 0; d1 < 3; d1++) {
             }
         }
     }
+
 }
 
 function zero_padd(i) {
